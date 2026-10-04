@@ -326,13 +326,25 @@ Incorporate natural hooks and rhythm, and weave in punchy phrases like:
 4. "sentiment": A brief assessment of the emotional tone and clarity (e.g., "واثق ومقنع", "حماسي وتطويري").
 5. "estimatedDurationSec": Number of seconds this would take to read at natural pace (around 2.5 words per second).`;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
-      },
-    });
+    let response: any;
+    try {
+      response = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+        },
+      });
+    } catch (err: any) {
+      console.warn('Falling back to gemini-2.5-flash due to error/high load:', err?.message);
+      response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+        },
+      });
+    }
 
     const parsed = JSON.parse(response.text || '{}');
     return res.json({ analysis: parsed, success: true });
@@ -525,13 +537,25 @@ Generate a comprehensive, agency-grade commercial package in valid JSON with the
   "directorTips": "نصيحة إخراجية للمؤسس أثناء تصوير وتسجيل الإعلان"
 }`;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
-      },
-    });
+    let response: any;
+    try {
+      response = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+        },
+      });
+    } catch (err: any) {
+      console.warn('Falling back to gemini-2.5-flash due to error/high load:', err?.message);
+      response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+        },
+      });
+    }
 
     let scriptText = '';
     let hook = '';
