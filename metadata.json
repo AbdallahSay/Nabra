@@ -1,0 +1,10 @@
+{
+  "name": "Nabra Masrya - Egyptian Voice & Audio Studio",
+  "description": "Studio for transcribing microphone audio with gemini-3.5-transcribe and generating natural Egyptian Arabic entrepreneur voiceovers.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

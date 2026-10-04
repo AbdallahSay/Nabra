@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Light Mode & Theme Customization
+   ========================================================================== */
+
+html.light,
+.light {
+  color-scheme: light;
+}
+
+html.light body,
+.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Background mappings */
+.light .bg-slate-950,
+.light .bg-slate-950\/95,
+.light .bg-slate-950\/90,
+.light .bg-slate-950\/85,
+.light .bg-slate-950\/80,
+.light .bg-slate-950\/70,
+.light .bg-slate-950\/60,
+.light .bg-slate-950\/50 {
+  background-color: #ffffff !important;
+}
+
+.light .bg-slate-900,
+.light .bg-slate-900\/95,
+.light .bg-slate-900\/90,
+.light .bg-slate-900\/85,
+.light .bg-slate-900\/80,
+.light .bg-slate-900\/70,
+.light .bg-slate-900\/60,
+.light .bg-slate-900\/50 {
+  background-color: #f1f5f9 !important;
+}
+
+.light .bg-slate-800,
+.light .bg-slate-800\/90,
+.light .bg-slate-800\/80,
+.light .bg-slate-800\/70,
+.light .bg-slate-800\/60,
+.light .bg-slate-800\/50,
+.light .bg-slate-750,
+.light .bg-slate-700 {
+  background-color: #e2e8f0 !important;
+}
+
+.light .hover\:bg-slate-800:hover,
+.light .hover\:bg-slate-750:hover,
+.light .hover\:bg-slate-700:hover {
+  background-color: #cbd5e1 !important;
+}
+
+/* Border mappings */
+.light .border-slate-800,
+.light .border-slate-800\/90,
+.light .border-slate-800\/80,
+.light .border-slate-800\/60,
+.light .border-slate-850,
+.light .border-slate-700,
+.light .border-slate-700\/80 {
+  border-color: #cbd5e1 !important;
+}
+
+.light .hover\:border-slate-700:hover {
+  border-color: #94a3b8 !important;
+}
+
+/* Text color mappings */
+.light .text-white,
+.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Enhanced contrast for amber/emerald badges in light mode */
+.light .text-amber-300,
+.light .text-amber-400 {
+  color: #b45309 !important;
+}
+
+.light .text-emerald-300,
+.light .text-emerald-400 {
+  color: #047857 !important;
+}
+
+.light .text-sky-300,
+.light .text-sky-400 {
+  color: #0369a1 !important;
+}
+
+.light .text-cyan-300,
+.light .text-cyan-400 {
+  color: #0e7490 !important;
+}
+
+/* Light mode card container elevation */
+.light .rounded-2xl,
+.light .rounded-3xl {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+}
+
+/* Form inputs & textareas in light mode */
+.light textarea,
+.light input[type="text"],
+.light input[type="search"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light textarea::placeholder,
+.light input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Range input sliders in light mode */
+.light input[type="range"] {
+  background-color: #cbd5e1 !important;
+}
+
+/* Preserve dark text on bright buttons like amber/emerald/cyan */
+.light .bg-amber-500,
+.light .bg-emerald-500,
+.light .bg-cyan-500,
+.light .text-slate-950 {
+  color: #020617 !important;
+}
+
+/* Light mode header backdrop */
+.light header {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border-bottom-color: #e2e8f0 !important;
+}
