@@ -24,7 +24,6 @@ import {
   CheckCircle2,
   Layers,
   FileText,
-  Share2,
 } from 'lucide-react';
 import { GeneratedVoice } from '../types';
 import { base64ToBlob, downloadBlob, formatDuration, wavToMp3Blob } from '../utils/audioUtils';

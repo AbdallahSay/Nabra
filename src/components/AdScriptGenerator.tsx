@@ -168,6 +168,8 @@ export interface SavedAdScript {
   savedAt: number;
   tags?: string[];
   isFavorite?: boolean;
+  audioBlob?: Blob;
+  voiceUsed?: string;
 }
 
 const STORAGE_KEY = 'nabra_saved_ad_scripts_v1';

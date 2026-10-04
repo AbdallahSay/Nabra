@@ -280,6 +280,14 @@ export const AudioRecorder: React.FC<AudioRecorderProps> = ({
       const base64Audio = await blobToBase64(recordedBlob);
       const mime = recordedBlob.type || 'audio/webm';
 
+      // Serverless hosts (Vercel) reject request bodies above ~4.5MB
+      const MAX_BASE64_CHARS = 4 * 1024 * 1024;
+      if (base64Audio.length > MAX_BASE64_CHARS) {
+        throw new Error(
+          'الملف الصوتي كبير جداً (الحد الأقصى حوالي 3 ميجابايت). يرجى رفع مقطع أقصر أو بصيغة مضغوطة مثل MP3/M4A.'
+        );
+      }
+
       const res = await fetch('/api/transcribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
