@@ -336,9 +336,9 @@ Incorporate natural hooks and rhythm, and weave in punchy phrases like:
         },
       });
     } catch (err: any) {
-      console.warn('Falling back to gemini-2.5-flash due to error/high load:', err?.message);
+      console.warn('Falling back to gemini-3.5-flash due to error/high load:', err?.message);
       response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3.5-flash',
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
@@ -547,9 +547,9 @@ Generate a comprehensive, agency-grade commercial package in valid JSON with the
         },
       });
     } catch (err: any) {
-      console.warn('Falling back to gemini-2.5-flash due to error/high load:', err?.message);
+      console.warn('Falling back to gemini-3.5-flash due to error/high load:', err?.message);
       response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3.5-flash',
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
